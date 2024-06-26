@@ -11,8 +11,8 @@
   --icon-color: #ACACBE;
   --icon-hover-bg: #5b5e71;
   --placeholder-color: #dcdcdc;
-  --outgoing-chat-bg: #212121;
-  --incoming-chat-bg: #2F2F2F;
+  --outgoing-chat-bg: #343541;
+  --incoming-chat-bg: #444654;
   --outgoing-chat-border: #343541;
   --incoming-chat-border: #444654;
 }
@@ -73,6 +73,7 @@ body {
 .chat-container .chat.outgoing {
   background: var(--outgoing-chat-bg);
   border: 1px solid var(--outgoing-chat-border);
+  justify-content: flex-end; /* Align outgoing messages to the right */
 }
 .chat-container .chat.incoming {
   background: var(--incoming-chat-bg);
@@ -84,6 +85,9 @@ body {
   width: 100%;
   align-items: flex-start;
   justify-content: space-between;
+}
+.chat.outgoing .chat-content {
+  justify-content: flex-end; /* Align content of outgoing messages to the right */
 }
 span.material-symbols-rounded {
   user-select: none;
@@ -102,6 +106,9 @@ span.material-symbols-rounded {
   display: flex;
   align-items: center;
 }
+.chat.outgoing .chat-details {
+  justify-content: flex-end; /* Align details of outgoing messages to the right */
+}
 .chat .chat-details img {
   width: 35px;
   height: 35px;
@@ -115,6 +122,9 @@ span.material-symbols-rounded {
   padding: 0 50px 0 25px;
   color: var(--text-color);
   word-break: break-word;
+}
+.chat.outgoing .chat-details p {
+  padding: 0 25px 0 50px; /* Adjust padding for outgoing messages */
 }
 .chat .chat-details p.error {
   color: #e55865;
