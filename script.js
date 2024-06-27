@@ -16,7 +16,7 @@ const loadDataFromLocalstorage = () => {
 
     const defaultText = `<div class="default-text">
                             <h1>Seterah Bot</h1>
-                            <p>Selamat Datang di Sehat Sejahtera ChatBot</p>
+                            <p>Selamat Datang Semuanya di Sehat Sejahtera ChatBot</p>
                         </div>`
 
     chatContainer.innerHTML = localStorage.getItem("all-chats") || defaultText;
