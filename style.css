@@ -45,6 +45,83 @@ body {
   background: var(--background-color);
   color: var(--text-color);
   transition: background 0.3s, color 0.3s;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Sidebar styling */
+.sidebar {
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  top: 0;
+  left: -250px;
+  background-color: #111;
+  padding-top: 60px;
+  transition: 0.5s;
+}
+
+.sidebar .close-btn {
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 36px;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.sidebar .sidebar-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.sidebar .sidebar-btn {
+  width: 80%;
+  padding: 10px;
+  margin: 10px 0;
+  color: white;
+  background-color: #333;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.sidebar .sidebar-btn:hover {
+  background-color: #555;
+}
+
+.open-btn {
+  font-size: 24px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  border: none;
+  padding: 10px;
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
 }
 
 /* Chats container styling */
@@ -298,14 +375,14 @@ span.material-symbols-rounded {
   transform: scale(0.95);
 }
 
-/* Reponsive Media Query */
+/* Responsive Media Query */
 @media screen and (max-width: 600px) {
   .default-text h1 {
     font-size: 2.3rem;
   }
 
   :where(.default-text p, textarea, .chat p) {
-    font-size: 0.95rem!important;
+    font-size: 0.95rem !important;
   }
 
   .chat-container .chat {
@@ -341,61 +418,6 @@ span.material-symbols-rounded {
   }
 
   span.material-symbols-rounded {
-    font-size: 1.25rem!important;
+    font-size: 1.25rem !important;
   }
 }
-
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-}
-
-.sidebar {
-  height: 100%;
-  width: 250px;
-  position: fixed;
-  top: 0;
-  left: -250px;
-  background-color: #111;
-  padding-top: 60px;
-  transition: 0.5s;
-}
-
-.sidebar ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.sidebar ul li {
-  padding: 10px 15px;
-  text-align: left;
-  color: white;
-}
-
-.sidebar .close-btn {
-  position: absolute;
-  top: 10px;
-  right: 25px;
-  font-size: 36px;
-  color: white;
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
-.open-btn {
-  font-size: 20px;
-  cursor: pointer;
-  background-color: #111;
-  color: white;
-  border: none;
-  padding: 10px 15px;
-}
-
-#main {
-  transition: margin-left .5s;
-  padding: 16px;
-}
-
