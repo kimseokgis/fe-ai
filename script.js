@@ -3,6 +3,9 @@ const sendButton = document.querySelector("#send-btn");
 const chatContainer = document.querySelector(".chat-container");
 const themeButton = document.querySelector("#theme-btn");
 const deleteButton = document.querySelector("#delete-btn");
+const uploadButton = document.querySelector("#upload-btn");
+const fileInput = document.querySelector("#file-input");
+const recordButton = document.querySelector("#record-btn");
 
 let userText = null;
 const API_KEY = "PASTE-YOUR-API-KEY-HERE"; // Paste your API key here
@@ -132,6 +135,23 @@ themeButton.addEventListener("click", () => {
     document.body.classList.toggle("light-mode");
     localStorage.setItem("themeColor", themeButton.innerText);
     themeButton.innerText = document.body.classList.contains("light-mode") ? "dark_mode" : "light_mode";
+});
+
+uploadButton.addEventListener("click", () => {
+    fileInput.click();
+});
+
+fileInput.addEventListener("change", (event) => {
+    const file = event.target.files[0];
+    if (file) {
+        // Display file in chat or process as needed
+        console.log('File selected:', file.name);
+    }
+});
+
+recordButton.addEventListener("click", () => {
+    // Implement voice recording functionality here
+    console.log('Voice recording started');
 });
 
 const initialInputHeight = chatInput.scrollHeight;
