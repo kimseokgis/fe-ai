@@ -1,5 +1,5 @@
 function navigateToIndex() {
-    window.location.href = 'index.html';
+    window.location.href = 'chat.html';
 }
 
 document.getElementById('contact-form').addEventListener('submit', function(event) {
