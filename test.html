@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatGPT Clone</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <style>
+        body { font-family: 'Roboto', sans-serif; }
+        .sidebar { transform: translateX(-100%); transition: transform 0.3s ease; }
+        .sidebar.open { transform: translateX(0); }
+    </style>
+</head>
+<body class="bg-gray-100">
+
+    <div id="sidebar" class="sidebar fixed top-0 left-0 h-full w-64 bg-white shadow-lg z-50">
+        <button class="close-btn p-4 text-right" onclick="toggleSidebar()">×</button>
+        <div class="sidebar-buttons p-4">
+            <button class="sidebar-btn block w-full text-left py-2 px-4 text-gray-800 hover:bg-gray-200" onclick="navigateTo('daftar.html')">Daftar</button>
+            <button class="sidebar-btn block w-full text-left py-2 px-4 text-gray-800 hover:bg-gray-200" onclick="navigateTo('login.html')">Masuk</button>
+        </div>
+    </div>
+
+    <div id="main" class="ml-0 md:ml-64 transition-all duration-300">
+        <div class="p-4 flex items-center bg-white shadow-md">
+            <span class="material-symbols-rounded cursor-pointer" onclick="toggleSidebar()">menu</span>
+            <h1 class="ml-4 text-2xl font-bold">ChatGPT Clone</h1>
+        </div>
+
+        <div class="chat-container p-4">
+            <!-- Your chatbot content goes here -->
+        </div>
+    </div>
+
+    <div class="typing-container fixed bottom-0 w-full bg-white shadow-lg p-4">
+        <div class="typing-content flex items-center space-x-4">
+            <div class="typing-textarea flex-grow">
+                <textarea id="chat-input" class="w-full p-2 border rounded-md" placeholder="Silahkan ketik apa yang anda inginkan?" required></textarea>
+            </div>
+            <div class="typing-controls flex items-center space-x-2">
+                <span id="send-btn" class="material-symbols-rounded cursor-pointer">send</span>
+                <span id="theme-btn" class="material-symbols-rounded cursor-pointer">light_mode</span>
+                <span id="delete-btn" class="material-symbols-rounded cursor-pointer">delete</span>
+                <span id="upload-btn" class="material-symbols-rounded cursor-pointer">attach_file</span>
+                <input type="file" id="file-input" class="hidden">
+                <span id="record-btn" class="material-symbols-rounded cursor-pointer">mic</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleSidebar() {
+            document.getElementById('sidebar').classList.toggle('open');
+            document.getElementById('main').classList.toggle('ml-64');
+        }
+    </script>
+
+</body>
+</html>
