@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Google Fonts Link For Icons -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <script src="script.js" defer></script>
     <script src="script2.js"></script>
 </head>
@@ -20,15 +19,9 @@
             <button class="sidebar-btn" onclick="navigateTo('login.html')">Masuk</button>
         </div>
     </div>
-    <div id="main" class="p-4">
-        <span class="material-symbols-rounded cursor-pointer" onclick="toggleSidebar()">menu</span>
+    <div id="main">
+        <span class="material-symbols-rounded" onclick="toggleSidebar()">menu</span>
         <!-- Your chatbot content goes here -->
-
-        <!-- User profile image -->
-        <div class="flex items-center mt-4">
-            <img alt="User" referrerpolicy="no-referrer" loading="lazy" width="32" height="32" decoding="async" class="rounded-sm" src="https://lh3.googleusercontent.com/a/AEdFTp6PYJNDTg1Y-6mwhllwmAj83qBc1WTI8aqNEQd9Wg=s96-c" style="color: transparent;">
-            <span class="ml-2">Username</span>
-        </div>
     </div>
     <div class="chat-container"></div>
 
