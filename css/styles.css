@@ -4299,31 +4299,31 @@ img.u-pull-left {
 }
 
 .s-testimonials__author {
-    display       : inline-block;
-    min-height    : var(--vspace-2);
-    margin-bottom : var(--vspace-0_625);
-    padding-left  : calc(2.25 * var(--space));
-    position      : relative;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 .s-testimonials__avatar {
-    width         : var(--vspace-1_75);
-    height        : var(--vspace-1_75);
-    border-radius : 100%;
-    outline       : none;
-    position      : absolute;
-    top           : 0;
-    left          : 0;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
 }
 
 .s-testimonials__cite {
-    display : block;
+    display: block;
+    text-align: center;
 }
 
-.s-testimonials__cite strong,
+.s-testimonials__cite strong {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
 .s-testimonials__cite span {
-    font-style : normal;
-    transition : all 0.3s ease-in-out;
+    font-size: 14px;
+    color: #666;
 }
 
 .s-testimonials__cite strong {
