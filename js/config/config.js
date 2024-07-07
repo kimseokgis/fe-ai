@@ -33,11 +33,11 @@ export function GetDataForm() {
 
 // Login
 export function PostLogin() {
-    const email = document.getElementById("email").value;
+    const username = document.getElementById("username").value;
     const password = document.getElementById("password").value;
 
     const data = {
-        email: email,
+        username: username,
         password: password,
     };
     return data;
@@ -68,7 +68,7 @@ function ResponsePostLogin(response) {
         Swal.fire({
             icon: 'error',
             title: 'Gagal Masuk',
-            text: 'Email atau Kata Sandi tidak valid. Silakan coba lagi.',
+            text: 'Username atau Kata Sandi tidak valid. Silakan coba lagi.',
         });
     }
 }
