@@ -30,8 +30,7 @@
                   confirmButtonText: 'OK'
               }).then((result) => {
                   if (result.isConfirmed) {
-                      // Redirect to dashboard.html
-                      window.location.href = 'dashboard.html';
+                      window.location.href = 'chat.html';
                   }
               });
           } else {
