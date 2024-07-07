@@ -56,7 +56,7 @@ export function AlertPost(value) {
 // Response Post Login
 function ResponsePostLogin(response) {
     if (response && response.token) {
-        // console.log("Token User:", response.token);
+        console.log("Token User:", response.token);
         setCookieWithExpireHour("Login", response.token, 2);
         window.location.href = 'https://kimseokgis.advocata.me/fe-ai/chat.html';
         Swal.fire({
