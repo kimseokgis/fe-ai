@@ -34,11 +34,11 @@ export function GetDataForm() {
 // Login
 export function PostLogin() {
     const email = document.getElementById("email").value;
-    const passwordhash = document.getElementById("password").value;
+    const password = document.getElementById("password").value;
 
     const data = {
         email: email,
-        password: password
+        password: password,
     };
     return data;
 }
