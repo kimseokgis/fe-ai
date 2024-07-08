@@ -295,7 +295,7 @@ pre[class*="language-"] {
 }
 
 :root {
-    --swiper-navigation-size  : 44px;
+    --swiper-navigation-size  : 25px;
     /*
     --swiper-navigation-color : var(--swiper-theme-color);
     */
@@ -313,7 +313,7 @@ pre[class*="language-"] {
     display         : flex;
     align-items     : center;
     justify-content : center;
-    color           : var(--swiper-navigation-color, var(--swiper-theme-color));
+    color           : var(--swiper-navigation-color #000000, var(--swiper-theme-color));
 }
 
 .swiper-button-prev.swiper-button-disabled,
