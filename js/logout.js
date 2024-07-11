@@ -13,16 +13,16 @@ document.getElementById('logoutButton').addEventListener('click', function() {
         confirmButtonText: 'OK'
     }).then((result) => {
         if (result.isConfirmed) {
-            window.location.href = 'index.html'; // Redirect to the login page or homepage
+            window.location.href = 'login.html'; // Redirect to the login page or homepage
         }
     });
 });
 
-window.onload = function() {
-    const userToken = getCookie('user_login');
-    if (userToken) {
-        document.getElementById('logoutButton').style.display = 'block';
-    } else {
-        window.location.href = 'index.html'; // Redirect to login if no user cookie is found
-    }
-};
+// window.onload = function() {
+//     const userToken = getCookie('user_login');
+//     if (userToken) {
+//         document.getElementById('logoutButton').style.display = 'block';
+//     } else {
+//         window.location.href = 'index.html'; // Redirect to login if no user cookie is found
+//     }
+// };
