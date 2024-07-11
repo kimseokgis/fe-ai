@@ -106,6 +106,13 @@ body {
   transform: translateX(-50%); /* Mengatur posisi di tengah */
 }
 
+.sidebar .logout-btn {
+  position: absolute;
+  bottom: 155px; /* Memberikan jarak dari bawah */
+  left: 50%; /* Memposisikan di tengah */
+  transform: translateX(-50%); /* Mengatur posisi di tengah */
+}
+
 .open-btn {
   font-size: 24px;
   cursor: pointer;
