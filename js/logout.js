@@ -18,11 +18,11 @@ document.getElementById('logoutButton').addEventListener('click', function() {
     });
 });
 
-// window.onload = function() {
-//     const userToken = getCookie('user_login');
-//     if (userToken) {
-//         document.getElementById('logoutButton').style.display = 'block';
-//     } else {
-//         window.location.href = 'index.html'; // Redirect to login if no user cookie is found
-//     }
-// };
+window.onload = function() {
+    const userToken = getCookie('user_login');
+    if (userToken) {
+        document.getElementById('logoutButton').style.display = 'block';
+    } else {
+        window.location.href = 'login.html'; // Redirect to login if no user cookie is found
+    }
+};
