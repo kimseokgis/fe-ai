@@ -8,5 +8,9 @@
 npm init --yes
 ```
 ```sh
+npm install axios
+```
+Atau
+```sh
 npm init --save axios
 ```
