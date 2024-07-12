@@ -112,7 +112,7 @@ body {
 
 .sidebar .logout-btn {
   position: absolute;
-  bottom: 155px; /* Memberikan jarak dari bawah */
+  bottom: 120px; /* Memberikan jarak dari bawah */
   left: 50%; /* Memposisikan di tengah */
   transform: translateX(-50%); /* Mengatur posisi di tengah */
 }
