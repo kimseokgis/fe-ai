@@ -1,19 +1,29 @@
-// logout.js
 import { deleteCookie, getCookie } from './cookieUtils.js';
 
 document.getElementById('logoutButton').addEventListener('click', function() {
-    // Remove the user login cookie
-    deleteCookie('user_login');
-
-    // Show SweetAlert success message
+    // Show SweetAlert confirmation dialog
     Swal.fire({
-        icon: 'success',
-        title: 'Logout Berhasil!',
-        text: 'Anda telah berhasil logout.',
-        confirmButtonText: 'OK'
+        title: 'Apakah Anda yakin ingin keluar?',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonText: 'Ya, keluar',
+        cancelButtonText: 'Batal'
     }).then((result) => {
         if (result.isConfirmed) {
-            window.location.href = 'login.html'; // Redirect to the login page or homepage
+            // Remove the user login cookie
+            deleteCookie('user_login');
+
+            // Show SweetAlert success message
+            Swal.fire({
+                icon: 'success',
+                title: 'Logout Berhasil!',
+                text: 'Anda telah berhasil logout.',
+                confirmButtonText: 'OK'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    window.location.href = 'login.html'; // Redirect to the login page or homepage
+                }
+            });
         }
     });
 });
