@@ -33,6 +33,9 @@ window.onload = function() {
     if (userToken) {
         document.getElementById('logoutButton').style.display = 'block';
     } else {
-        window.location.href = 'login.html'; // Redirect to login if no user cookie is found
+        // Tampilkan pesan di halaman bahwa pengguna perlu login
+        const chatContainer = document.querySelector(".chat-container");
+        // Opsi: sembunyikan elemen input chat
+        document.querySelector('.typing-container').style.display = 'none';
     }
 };
