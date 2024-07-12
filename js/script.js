@@ -116,11 +116,17 @@ const handleOutgoingChat = () => {
 
     // Create an outgoing chat div with user's message and append it to chat container
     const outgoingChatDiv = createChatElement(html, "outgoing");
-    chatContainer.querySelector(".default-text").remove();
+    
+    const defaultTextElement = chatContainer.querySelector(".default-text");
+    if (defaultTextElement) {
+        defaultTextElement.remove();
+    }
+    
     chatContainer.appendChild(outgoingChatDiv);
     chatContainer.scrollTo(0, chatContainer.scrollHeight);
     setTimeout(showTypingAnimation, 500);
 }
+
 
 deleteButton.addEventListener("click", () => {
     // Remove the chats from local storage and call loadDataFromLocalstorage function
