@@ -21,7 +21,7 @@ document.getElementById('logoutButton').addEventListener('click', function() {
                 confirmButtonText: 'OK'
             }).then((result) => {
                 if (result.isConfirmed) {
-                    window.location.href = 'login.html'; // Redirect to the login page or homepage
+                    window.location.href = 'chat.html'; // Redirect to the login page or homepage
                 }
             });
         }
