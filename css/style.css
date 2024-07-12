@@ -117,6 +117,10 @@ body {
   transform: translateX(-50%); /* Mengatur posisi di tengah */
 }
 
+.sidebar .logout-btn:hover {
+  background-color: #bc5353;
+}
+
 .open-btn {
   font-size: 24px;
   cursor: pointer;
