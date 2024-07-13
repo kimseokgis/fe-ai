@@ -6,8 +6,8 @@ document.getElementById('logoutButton').addEventListener('click', function() {
         title: 'Apakah Anda yakin ingin keluar?',
         icon: 'warning',
         showCancelButton: true,
-        confirmButtonText: 'Ya, keluar',
-        cancelButtonText: 'Batal'
+        confirmButtonText: 'Yes',
+        cancelButtonText: 'No'
     }).then((result) => {
         if (result.isConfirmed) {
             // Remove the user login cookie
