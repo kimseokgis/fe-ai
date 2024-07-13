@@ -1,7 +1,7 @@
 import { deleteCookie, getCookie } from './cookieUtils.js';
 
 document.getElementById('logoutButton').addEventListener('click', function() {
-    // Show SweetAlert confirmation dialog
+
     Swal.fire({
         title: 'Apakah Anda yakin ingin keluar?',
         icon: 'warning',
@@ -13,7 +13,6 @@ document.getElementById('logoutButton').addEventListener('click', function() {
             // Remove the user login cookie
             deleteCookie('user_login');
 
-            // Show SweetAlert success message
             Swal.fire({
                 icon: 'success',
                 title: 'Logout Berhasil!',
