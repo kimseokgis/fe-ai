@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mmakmur AI</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom animations and styles */
+        @keyframes spinner {
+            to { transform: rotate(360deg); }
+        }
+        .loading-spinner {
+            width: 24px;
+            height: 24px;
+            border: 4px solid transparent;
+            border-top-color: blue;
+            border-radius: 50%;
+            animation: spinner 1s linear infinite;
+            display: inline-block;
+        }
+        .fade-in {
+            opacity: 0;
+            transition: opacity 0.5s ease-in;
+        }
+        .fade-in.show {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 p-6">
+    <div class="max-w-2xl mx-auto bg-white p-6 rounded-lg shadow-lg">
+        <h1 class="text-2xl font-bold mb-4">Makmur AI</h1>
+        <div id="responseDisplay" class="mt-6"></div>
+        <div class="mb-4">
+          <input type="text" id="chatInput" class="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Type your message">
+          <div id="loading" class="hidden text-blue-500 mt-2 loading-spinner"></div>
+      </div>
+      <div class="flex space-x-2">
+          <button onclick="sendMessage()" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Send</button>
+          <button onclick="deleteResponses()" class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">Delete All Responses</button>
+      </div>
+      
+    </div>
+
+    <script src="test.js"></script>
+</body>
+</html>
