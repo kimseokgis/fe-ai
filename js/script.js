@@ -35,7 +35,9 @@ const createChatElement = (content, className) => {
 }
 
 const getChatResponse = async (incomingChatDiv) => {
-    const API_URL = "https://api.openai.com/v1/completions";
+    const inp = chatInput.value.trim()
+    console.log(inp)
+    const API_URL = `https://asia-southeast2-gis-project-401902.cloudfunctions.net/backend-ai/chatRegexp?key=${inp}`;
     const pElement = document.createElement("p");
 
     // Define the properties and data for the API request
@@ -43,16 +45,16 @@ const getChatResponse = async (incomingChatDiv) => {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
-            "Authorization": `Bearer ${API_KEY}`
+            "login": getCookie("user_login")
         },
-        body: JSON.stringify({
-            model: "text-davinci-003",
-            prompt: userText,
-            max_tokens: 2048,
-            temperature: 0.2,
-            n: 1,
-            stop: null
-        })
+        // body: JSON.stringify({
+        //     model: "text-davinci-003",
+        //     prompt: userText,
+        //     max_tokens: 2048,
+        //     temperature: 0.2,
+        //     n: 1,
+        //     stop: null
+        // })
     }
 
     // Send POST request to API, get response and set the reponse as paragraph element text
