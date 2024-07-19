@@ -7,7 +7,7 @@ const uploadButton = document.querySelector("#upload-btn");
 const fileInput = document.querySelector("#file-input");
 const recordButton = document.querySelector("#record-btn");
 
-
+const Chatinputvalue = document
 let userText = null;
 const API_KEY = "PASTE-YOUR-API-KEY-HERE"; // Paste your API key here
 
@@ -36,9 +36,7 @@ const createChatElement = (content, className) => {
 }
 
 const getChatResponse = async (incomingChatDiv) => {
-    const inp = chatInput.value.trim()
-    console.log(inp)
-    const API_URL = `https://asia-southeast2-gis-project-401902.cloudfunctions.net/backend-ai/chatRegexp?key=tot`;
+    const API_URL = `https://asia-southeast2-gis-project-401902.cloudfunctions.net/backend-ai/chatRegexp?key=${userText}`;
     const pElement = document.createElement("p");
 
     // Define the properties and data for the API request
@@ -103,7 +101,7 @@ const showTypingAnimation = () => {
 }
 
 const handleOutgoingChat = () => {
-    userText = chatInput.value.trim(); // Get chatInput value and remove extra spaces
+    userText = chatInput.value.trim();
     if (!userText) return; // If chatInput is empty return from here
 
     // Clear the input field and reset its height
@@ -119,7 +117,6 @@ const handleOutgoingChat = () => {
 
     // Create an outgoing chat div with user's message and append it to chat container
     const outgoingChatDiv = createChatElement(html, "outgoing");
-    
     const defaultTextElement = chatContainer.querySelector(".default-text");
     if (defaultTextElement) {
         defaultTextElement.remove();
