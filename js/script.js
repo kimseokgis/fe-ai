@@ -106,7 +106,7 @@ const handleOutgoingChat = () => {
     if (!userText) return; // If chatInput is empty return from here
 
     // Clear the input field and reset its height
-    chatInput.value = "";
+    // chatInput.value = "";
     chatInput.style.height = `${initialInputHeight}px`;
 
     const html = `<div class="chat-content">
