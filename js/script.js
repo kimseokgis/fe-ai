@@ -71,9 +71,7 @@ const getChatResponse = async (incomingChatDiv) => {
         }
     } catch (error) { // Add error class to the paragraph element and set error text
         pElement.classList.add("error");
-        if (response.status == false){
-            pElement.textContent = "Aduh aduh aduhaaai aku ga ngerti nih, coba nanya yang lain biar kamu ngertiin akuu....";
-        }
+        pElement.textContent = "Aduh aduh aduhaaai aku ga ngerti nih, coba nanya yang lain biar kamu ngertiin akuu....";
     }
 
     // Remove the typing animation, append the paragraph element and save the chats to local storage
