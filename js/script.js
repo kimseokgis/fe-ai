@@ -7,6 +7,7 @@ const uploadButton = document.querySelector("#upload-btn");
 const fileInput = document.querySelector("#file-input");
 const recordButton = document.querySelector("#record-btn");
 
+
 let userText = null;
 const API_KEY = "PASTE-YOUR-API-KEY-HERE"; // Paste your API key here
 
@@ -37,7 +38,7 @@ const createChatElement = (content, className) => {
 const getChatResponse = async (incomingChatDiv) => {
     const inp = chatInput.value.trim()
     console.log(inp)
-    const API_URL = `https://asia-southeast2-gis-project-401902.cloudfunctions.net/backend-ai/chatRegexp?key=${inp}`;
+    const API_URL = `https://asia-southeast2-gis-project-401902.cloudfunctions.net/backend-ai/chatRegexp?key=tot`;
     const pElement = document.createElement("p");
 
     // Define the properties and data for the API request
@@ -60,7 +61,7 @@ const getChatResponse = async (incomingChatDiv) => {
     // Send POST request to API, get response and set the reponse as paragraph element text
     try {
         const response = await (await fetch(API_URL, requestOptions)).json();
-        pElement.textContent = response.choices[0].text.trim();
+        pElement.textContent = response.responses;
     } catch (error) { // Add error class to the paragraph element and set error text
         pElement.classList.add("error");
         pElement.textContent = "Helloo";
