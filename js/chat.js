@@ -24,3 +24,8 @@ function checkLoginStatus() {
         logoutButton.style.display = "none";
     }
 }
+
+// Add event listener to call checkLoginStatus when the page loads
+document.addEventListener("DOMContentLoaded", function() {
+    checkLoginStatus();
+});
