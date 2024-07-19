@@ -36,6 +36,10 @@ const createChatElement = (content, className) => {
 }
 
 const getChatResponse = async (incomingChatDiv) => {
+    if (userText.includes(" ")) {
+        // Replace spaces with underscores
+        userText = userText.replace(/ /g, "_");
+    }
     const API_URL = `https://asia-southeast2-gis-project-401902.cloudfunctions.net/backend-ai/chatRegexp?key=${userText}`;
     const pElement = document.createElement("p");
 
@@ -105,7 +109,7 @@ const handleOutgoingChat = () => {
     if (!userText) return; // If chatInput is empty return from here
 
     // Clear the input field and reset its height
-    // chatInput.value = "";
+    chatInput.value = "";
     chatInput.style.height = `${initialInputHeight}px`;
 
     const html = `<div class="chat-content">
