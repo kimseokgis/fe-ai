@@ -25,6 +25,17 @@ function checkLoginStatus() {
     }
 }
 
+// chat.js
+
+document.addEventListener('DOMContentLoaded', () => {
+    const username = localStorage.getItem('username');
+    if (username) {
+        const defaultTextContainer = document.querySelector('.default-text');
+        defaultTextContainer.innerHTML = `<h1>Selamat Datang, ${username}</h1>`;
+    }
+});
+
+
 
 document.addEventListener("DOMContentLoaded", function () {
     checkLoginStatus();
