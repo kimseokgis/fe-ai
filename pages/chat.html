@@ -14,7 +14,7 @@
 
     <div id="sidebar" class="sidebar">
         <div class="sidebar-buttons">
-            <button class="sidebar-btn" id="loginButton" onclick="navigateTo('login.html')">Masuk / Daftar</button>   
+            <button class="sidebar-btn" id="loginButton" onclick="navigateTo('login.html')">Masuk / Daftar</button>
         </div>
         <button class="sidebar-btn back-btn" onclick="navigateTo('../index.html')">Beranda</button>
         <button class="sidebar-btn logout-btn" button id="logoutButton" style="display: none;">Logout</button>
@@ -26,18 +26,18 @@
     <div class="typing-container">
         <div class="typing-content">
             <!-- <form id="chat" style="width: 1000px; margin: 0 auto; display: flex; align-items: center;"> -->
-                <div class="typing-textarea">
-                    <textarea id="chat-input" spellcheck="false" placeholder="Silahkan ketik apa yang anda inginkan?"
-                        required></textarea>
-                    <span id="send-btn" class="material-symbols-rounded" type="submit">send</span>
-                </div>
-                <div class="typing-controls">
-                    <span id="theme-btn" class="material-symbols-rounded">light_mode</span>
-                    <span id="delete-btn" class="material-symbols-rounded">delete</span>
-                    <span id="upload-btn" class="material-symbols-rounded">attach_file</span>
-                    <input type="file" id="file-input" style="display:none;">
-                    <span id="record-btn" class="material-symbols-rounded">mic</span>
-                </div>
+            <div class="typing-textarea">
+                <textarea id="chat-input" spellcheck="false" placeholder="Silahkan ketik apa yang anda inginkan?"
+                    required></textarea>
+                <span id="send-btn" class="material-symbols-rounded" type="submit">send</span>
+            </div>
+            <div class="typing-controls">
+                <span id="theme-btn" class="material-symbols-rounded">light_mode</span>
+                <span id="delete-btn" class="material-symbols-rounded">delete</span>
+                <span id="upload-btn" class="material-symbols-rounded">attach_file</span>
+                <input type="file" id="file-input" style="display:none;">
+                <span id="record-btn" class="material-symbols-rounded">mic</span>
+            </div>
             <!-- </form> -->
         </div>
     </div>
@@ -49,4 +49,5 @@
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script>
 <script src="../node_modules/axios/dist/axios.min.js"></script>
 <!-- <script type="module" src="../js/chat.js"></script> -->
+
 </html>
