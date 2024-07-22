@@ -2,7 +2,7 @@
 const form = document.getElementById('formRegister');
 
 // Add event listener to form submit
-form.addEventListener('submit', async function(event) {
+form.addEventListener('submit', async function (event) {
     event.preventDefault();
 
     // Get username, email, and password values
@@ -51,13 +51,13 @@ form.addEventListener('submit', async function(event) {
     }
 });
 
-    // Show Password Function
+// Show Password Function
 const showPassword = document.getElementById('showPassword');
 const passwordField = document.getElementById('password');
-showPassword.addEventListener('change', function() {
+showPassword.addEventListener('change', function () {
     if (this.checked) {
         passwordField.type = 'text';
-    }else {
+    } else {
         passwordField.type = 'password';
     }
 });
