@@ -51,7 +51,7 @@ form.addEventListener('submit', async function(event) {
     }
 });
 
-    // Show password functionality
+    // Show Password Function
 const showPassword = document.getElementById('showPassword');
 const passwordField = document.getElementById('password');
 showPassword.addEventListener('change', function() {
