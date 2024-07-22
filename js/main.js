@@ -376,16 +376,16 @@
                 let modalbox = link.getAttribute('href');
                 let instance = basicLightbox.create(
                     document.querySelector(modalbox), {
-                        onShow: function (instance) {
-                            //detect Escape key press
-                            document.addEventListener("keydown", function (event) {
-                                event = event || window.event;
-                                if (event.key === "Escape") {
-                                    instance.close();
-                                }
-                            });
-                        }
+                    onShow: function (instance) {
+                        //detect Escape key press
+                        document.addEventListener("keydown", function (event) {
+                            event = event || window.event;
+                            if (event.key === "Escape") {
+                                instance.close();
+                            }
+                        });
                     }
+                }
                 )
                 modals.push(instance);
             });
