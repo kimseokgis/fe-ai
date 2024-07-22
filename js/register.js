@@ -49,4 +49,6 @@ form.addEventListener('submit', async function(event) {
             text: 'Terjadi kesalahan saat registrasi. Silakan coba lagi nanti.'
         });
     }
+    // Show password functionality
+const showPassword = document.getElementById('showPassword');
 });
