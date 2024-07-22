@@ -25,7 +25,6 @@ function sendMessage() {
     if (message) {
         addMessageToChat("outgoing", message);
         input.value = "";
-        // You can add your code here to send the message to the server
     }
 }
 
