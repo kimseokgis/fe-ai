@@ -56,10 +56,10 @@ const getChatResponse = async (incomingChatDiv) => {
     try {
         const response = await (await fetch(API_URL, requestOptions)).json();
         // pElement.textContent = response.responses;
-        if (response.status == false){
+        if (response.status == false) {
             pElement.textContent = "Aduh aduh aduhaaai aku ga ngerti nih, coba nanya yang lain biar kamu ngertiin akuu....";
         } else {
-            pElement.textContent = response.responses; 
+            pElement.textContent = response.responses;
         }
     } catch (error) { // Add error class to the paragraph element and set error text
         pElement.classList.add("error");
@@ -104,7 +104,6 @@ const showTypingAnimation = () => {
 const handleOutgoingChat = () => {
     userText = chatInput.value.trim();
     if (!userText) return; // If chatInput is empty return from here
-
     // Clear the input field and reset its height
     chatInput.value = "";
     chatInput.style.height = `${initialInputHeight}px`;
@@ -122,7 +121,7 @@ const handleOutgoingChat = () => {
     if (defaultTextElement) {
         defaultTextElement.remove();
     }
-    
+
     chatContainer.appendChild(outgoingChatDiv);
     chatContainer.scrollTo(0, chatContainer.scrollHeight);
     setTimeout(showTypingAnimation, 500);
