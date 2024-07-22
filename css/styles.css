@@ -4377,7 +4377,7 @@ img.u-pull-left {
  * ------------------------------------------------------------------- */
 .s-footer {
     background-color : var(--color-gray-2);
-    padding-top      : calc(5.5 * var(--space));
+    padding-top      : calc(0.5 * var(--space));
     padding-bottom   : var(--vspace-3);
     margin-top       : auto;
     position         : relative;
