@@ -1,6 +1,6 @@
 import { deleteCookie, getCookie } from './cookieUtils.js';
 
-document.getElementById('logoutButton').addEventListener('click', function() {
+document.getElementById('logoutButton').addEventListener('click', function () {
 
     Swal.fire({
         title: 'Apakah Anda yakin ingin keluar?',
@@ -27,7 +27,7 @@ document.getElementById('logoutButton').addEventListener('click', function() {
     });
 });
 
-window.onload = function() {
+window.onload = function () {
     const userToken = getCookie('user_login');
     if (userToken) {
         document.getElementById('logoutButton').style.display = 'block';
