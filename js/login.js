@@ -52,3 +52,14 @@ form.addEventListener('submit', async function (event) {
         });
     }
 });
+
+// Show Password Function
+const showPassword = document.getElementById('showPassword');
+const passwordField = document.getElementById('password');
+showPassword.addEventListener('change', function () {
+    if (this.checked) {
+        passwordField.type = 'text';
+    } else {
+        passwordField.type = 'password';
+    }
+});
