@@ -1,4 +1,4 @@
-// Function to check if a cookie exists
+// Check Cookies
 function getCookie(name) {
     let cookieArr = document.cookie.split(";");
     for (let i = 0; i < cookieArr.length; i++) {
@@ -25,7 +25,7 @@ function checkLoginStatus() {
     }
 }
 
-// Add event listener to call checkLoginStatus when the page loads
-document.addEventListener("DOMContentLoaded", function() {
+
+document.addEventListener("DOMContentLoaded", function () {
     checkLoginStatus();
 });
