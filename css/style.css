@@ -30,10 +30,10 @@
   --icon-color: #a9a9bc;
   --icon-hover-bg: #f1f1f3;
   --placeholder-color: #1b1919;
-  --outgoing-chat-bg: #FFFFFF;
-  --incoming-chat-bg: #F7F7F8;
-  --outgoing-chat-border: #FFFFFF;
-  --incoming-chat-border: #D9D9E3;
+  --outgoing-chat-bg: #f4f4f9;
+  --incoming-chat-bg: #f4f4f9;
+  --outgoing-chat-border: #f4f4f9;
+  --incoming-chat-border: #f4f4f9;
   --background-color: #f4f4f9;
   --button-bg: #bebece;
   --button-hover-bg: #5d666e;
