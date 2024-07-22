@@ -52,4 +52,6 @@ form.addEventListener('submit', async function(event) {
     // Show password functionality
 const showPassword = document.getElementById('showPassword');
 const passwordField = document.getElementById('password');
+showPassword.addEventListener()
+
 });
