@@ -24,22 +24,22 @@ function sendMessage() {
             'login': getCookie("user_login")
         }
     })
-    .then(response => {
-        let apiResponses = JSON.parse(localStorage.getItem('apiResponses')) || [];
-        apiResponses.push({
-            message: inp,
-            response: response.data
+        .then(response => {
+            let apiResponses = JSON.parse(localStorage.getItem('apiResponses')) || [];
+            apiResponses.push({
+                message: inp,
+                response: response.data
+            });
+            localStorage.setItem('apiResponses', JSON.stringify(apiResponses));
+            displayResponses();
+            document.getElementById('chatInput').value = '';
+        })
+        .catch(error => {
+            console.error('Error fetching data from API:', error);
+        })
+        .finally(() => {
+            document.getElementById('loading').classList.add('hidden');
         });
-        localStorage.setItem('apiResponses', JSON.stringify(apiResponses));
-        displayResponses();
-        document.getElementById('chatInput').value = '';
-    })
-    .catch(error => {
-        console.error('Error fetching data from API:', error);
-    })
-    .finally(() => {
-        document.getElementById('loading').classList.add('hidden');
-    });
 }
 
 // Function to display all responses from localStorage
