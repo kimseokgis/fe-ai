@@ -50,14 +50,6 @@ const getChatResponse = async (incomingChatDiv) => {
             "Content-Type": "application/json",
             "login": getCookie("user_login")
         },
-        // body: JSON.stringify({
-        //     model: "text-davinci-003",
-        //     prompt: userText,
-        //     max_tokens: 2048,
-        //     temperature: 0.2,
-        //     n: 1,
-        //     stop: null
-        // })
     }
 
     // Send POST request to API, get response and set the reponse as paragraph element text
