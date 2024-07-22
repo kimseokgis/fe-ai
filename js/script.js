@@ -9,7 +9,7 @@ const recordButton = document.querySelector("#record-btn");
 
 const Chatinputvalue = document
 let userText = null;
-const API_KEY = "PASTE-YOUR-API-KEY-HERE"; // Paste your API key here
+const API_KEY = "APIKEY"; 
 
 const loadDataFromLocalstorage = () => {
     // Load saved chats and theme from local storage and apply/add on the page
