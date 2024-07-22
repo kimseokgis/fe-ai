@@ -2,7 +2,7 @@
 const form = document.getElementById('formlogin');
 
 // Add event listener to form submit
-form.addEventListener('submit', async function(event) {
+form.addEventListener('submit', async function (event) {
     event.preventDefault();
 
     // Get username and password values
@@ -37,7 +37,6 @@ form.addEventListener('submit', async function(event) {
                 }
             });
         } else {
-            // Show SweetAlert error message
             await Swal.fire({
                 icon: 'error',
                 title: 'Login Gagal!',
@@ -46,7 +45,6 @@ form.addEventListener('submit', async function(event) {
         }
     } catch (error) {
         console.error('Error during login:', error);
-        // Show SweetAlert error message
         await Swal.fire({
             icon: 'error',
             title: 'Error!',
