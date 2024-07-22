@@ -101,20 +101,20 @@ body {
 
 .sidebar .back-btn {
   position: absolute;
-  bottom: 20px; /* Memberikan jarak dari bawah */
-  left: 50%; /* Memposisikan di tengah */
-  transform: translateX(-50%); /* Mengatur posisi di tengah */
+  bottom: 20px; 
+  left: 50%; 
+  transform: translateX(-50%); 
 }
 
 .sidebar .back-btn:hover {
-  background-color: #555;
+  background-color: #bc5353;
 }
 
 .sidebar .logout-btn {
   position: absolute;
-  bottom: 120px; /* Memberikan jarak dari bawah */
-  left: 50%; /* Memposisikan di tengah */
-  transform: translateX(-50%); /* Mengatur posisi di tengah */
+  bottom: 120px; 
+  left: 50%; 
+  transform: translateX(-50%); 
 }
 
 .sidebar .logout-btn:hover {
