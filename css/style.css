@@ -18,8 +18,8 @@
   --outgoing-chat-border: #212121;
   --incoming-chat-border: #212121;
   --background-color: #212121;
-  --button-bg: #61dafb;
-  --button-hover-bg: #21a1f1;
+  --button-bg: #3c3f48;
+  --button-hover-bg: #737a7d;
   --default-text-color: #888;
   --chat-radius: 20px;
   --input-bg: #3c3f48;
@@ -29,16 +29,16 @@
   --text-color: #343541;
   --icon-color: #a9a9bc;
   --icon-hover-bg: #f1f1f3;
-  --placeholder-color: #6c6c6c;
+  --placeholder-color: #1b1919;
   --outgoing-chat-bg: #FFFFFF;
   --incoming-chat-bg: #F7F7F8;
   --outgoing-chat-border: #FFFFFF;
   --incoming-chat-border: #D9D9E3;
   --background-color: #f4f4f9;
-  --button-bg: #4a90e2;
-  --button-hover-bg: #357ab9;
+  --button-bg: #bebece;
+  --button-hover-bg: #5d666e;
   --default-text-color: #666;
-  --input-bg: #e4e4e9;
+  --input-bg: #bebece;
 }
 
 body {
