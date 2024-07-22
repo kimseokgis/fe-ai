@@ -49,11 +49,15 @@ form.addEventListener('submit', async function(event) {
             text: 'Terjadi kesalahan saat registrasi. Silakan coba lagi nanti.'
         });
     }
+});
+
     // Show password functionality
 const showPassword = document.getElementById('showPassword');
 const passwordField = document.getElementById('password');
 showPassword.addEventListener('change', function() {
     if (this.checked) {
         passwordField.type = 'text';
+    }else {
+        passwordField.type = 'password';
     }
 });
