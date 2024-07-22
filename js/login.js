@@ -53,6 +53,39 @@ form.addEventListener('submit', async function (event) {
     }
 });
 
+// login.js
+
+async function getUserData(username) {
+    const response = await fetch(`https://asia-southeast2-gis-project-401902.cloudfunctions.net/backend-ai/getuser?username=${username}`);
+    if (!response.ok) {
+        throw new Error('Network response was not ok ' + response.statusText);
+    }
+    return response.json();
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    const loginForm = document.getElementById('loginForm');
+    
+    loginForm.addEventListener('submit', async (event) => {
+        event.preventDefault();
+        
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+
+        // Lakukan logika login di sini
+        // Jika login berhasil, lanjutkan mengambil data pengguna dan menyimpan username di localStorage
+        
+        try {
+            const userData = await getUserData(username);
+            localStorage.setItem('username', userData.username);
+            window.location.href = 'chat.html'; // Redirect ke chat.html setelah login berhasil
+        } catch (error) {
+            console.error('Error fetching user data:', error);
+        }
+    });
+});
+
+
 // Show Password Function
 const showPassword = document.getElementById('showPassword');
 const passwordField = document.getElementById('password');
