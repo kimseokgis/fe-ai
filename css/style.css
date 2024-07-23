@@ -146,6 +146,16 @@ body {
   padding: 16px;
 }
 
+.profile-img {
+  width: 30px; /* Sesuaikan ukuran gambar profil */
+  height: 30px; /* Sesuaikan ukuran gambar profil */
+  border-radius: 50%; /* Membuat gambar menjadi lingkaran */
+  position: absolute;
+  top: 15px; /* Jarak dari atas */
+  right: 20px; /* Jarak dari kanan */
+  cursor: pointer; /* Menambahkan pointer saat mengarahkan mouse ke gambar */
+}
+
 /* Chats container styling */
 .chat-container {
   overflow-y: auto;
