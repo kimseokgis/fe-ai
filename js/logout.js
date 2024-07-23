@@ -41,6 +41,7 @@ window.onload = function () {
         const chatContainer = document.querySelector(".chat-container");
         // Opsi: sembunyikan elemen input chat
         document.querySelector('.typing-container').style.display = 'none';
+        document.querySelector('.profileLogo').style.display = 'none';
 
         const defaultTextContainer = document.querySelector('.default-text');
         defaultTextContainer.innerHTML = `<h1>Seterah Bot</h1><p>Selamat Datang di Sehat Sejahtera ChatBot</p>`;
