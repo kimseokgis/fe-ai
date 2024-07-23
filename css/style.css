@@ -18,11 +18,11 @@
   --outgoing-chat-border: #212121;
   --incoming-chat-border: #212121;
   --background-color: #212121;
-  --button-bg: #3c3f48;
+  --button-bg: #2F2F2F;
   --button-hover-bg: #737a7d;
   --default-text-color: #888;
   --chat-radius: 20px;
-  --input-bg: #3c3f48;
+  --input-bg: #2F2F2F;
 }
 
 .light-mode {
