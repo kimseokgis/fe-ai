@@ -19,18 +19,39 @@
             <button class="sidebar-btn" id="loginButton" onclick="navigateTo('login.html')">Masuk / Daftar</button>
         </div>
         <button class="sidebar-btn back-btn" onclick="navigateTo('../index.html')">Beranda</button>
-        <button class="sidebar-btn logout-btn" button id="logoutButton" style="display: none;">Logout</button>
+        <button class="sidebar-btn logout-btn" id="logoutButton" style="display: none;">Logout</button>
     </div>
     <div id="main">
         <span class="material-symbols-rounded" onclick="toggleSidebar()">menu</span>
-        <img src="../images/logo.svg" alt="profile picture" class="profile-img">
+        <div class="user-menu" style="float: right;">
+            <button class="profile-btn">
+                <img src="../images/logo.svg" alt="profile picture" class="profile-img">
+            </button>
+            <div class="user-menu-content">
+                <a href="#" class="menu-item">
+                    <span class="material-symbols-rounded">account_circle</span>
+                    GPT Saya
+                </a>
+                <a href="#" class="menu-item">
+                    <span class="material-symbols-rounded">tune</span>
+                    Sesuaikan ChatGPT
+                </a>
+                <a href="#" class="menu-item">
+                    <span class="material-symbols-rounded">settings</span>
+                    Pengaturan
+                </a>
+                <button id="logoutButton" class="menu-item">
+                    <span class="material-symbols-rounded">logout</span>
+                    Keluar
+                </button>
+            </div>
+        </div>
     </div>
     <div class="chat-container"></div>
     <div class="typing-container">
         <div class="typing-content">
             <div class="typing-textarea">
-                <textarea id="chat-input" spellcheck="false" placeholder="Kirim pesan ke Seterah Bot"
-                    required></textarea>
+                <textarea id="chat-input" spellcheck="false" placeholder="Kirim pesan ke Seterah Bot" required></textarea>
                 <span id="send-btn" class="material-symbols-rounded" type="submit">send</span>
             </div>
             <div class="typing-controls">
@@ -42,12 +63,34 @@
             </div>
         </div>
     </div>
+    <script src="../js/script.js" defer></script>
+    <script src="../js/script2.js" defer></script>
+    <script src="../js/chat.js" defer></script>
+    <script type="module" src="../js/logout.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script>
+    <script src="../node_modules/axios/dist/axios.min.js"></script>
+    <script>
+        // Toggle user menu visibility
+        document.querySelector('.profile-btn').addEventListener('click', function () {
+            const userMenuContent = document.querySelector('.user-menu-content');
+            userMenuContent.style.display = userMenuContent.style.display === 'block' ? 'none' : 'block';
+        });
+
+        // Logout button functionality
+        document.getElementById('logoutButton').addEventListener('click', function () {
+            // Add your logout logic here
+            Swal.fire({
+                icon: 'success',
+                title: 'Berhasil Keluar',
+                text: 'Anda telah berhasil keluar!',
+                timer: 1500,
+                showConfirmButton: false
+            }).then(() => {
+                // Redirect to the login page
+                window.location.href = 'login.html';
+            });
+        });
+    </script>
 </body>
-<script src="../js/script.js" defer></script>
-<script src="../js/script2.js" defer></script>
-<script src="../js/chat.js" defer></script>
-<script type="module" src="../js/logout.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script>
-<script src="../node_modules/axios/dist/axios.min.js"></script>
 
 </html>
