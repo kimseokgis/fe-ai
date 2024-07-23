@@ -27,3 +27,11 @@
     right: 0;
     margin-top: 10px;
 }
+
+.dropdown-menu a:hover {
+    background-color: #575757;
+}
+
+.profile-picture-container:hover .dropdown-menu {
+    display: block;
+}
