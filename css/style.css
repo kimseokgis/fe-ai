@@ -156,7 +156,7 @@ body {
   display: none;
   position: absolute;
   background-color: #333;
-  min-width: 200px;
+  min-width: 180px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
   border-radius: 20px;
@@ -190,7 +190,7 @@ body {
 }
 
 .user-menu-content .menu-item span {
-  margin-right: 8px;
+  margin-right: 10px;
 }
 
 .user-menu:hover .user-menu-content {
@@ -206,15 +206,15 @@ body {
   color: white;
 }
 
-.profile-img {
+.profileLogo {
   width: 30px;
   height: 30px;
   border-radius: 50%;
 }
 
 .profile-initial {
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   background-color: #28a745;
   display: flex;
