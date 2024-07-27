@@ -52,3 +52,9 @@
   .settings-container h2 {
     margin-bottom: 20px;
   }
+
+  .settings-content {
+    display: flex;
+    flex-direction: column;
+  }
+  
