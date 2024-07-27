@@ -29,13 +29,3 @@ function checkLoginStatus() {
         profilePicture.src = ""; // Clear profile picture
     }
 }
-
-// DOMContentLoaded event to set welcome message and check login status
-document.addEventListener('DOMContentLoaded', () => {
-    const username = localStorage.getItem('username');
-    if (username) {
-        const defaultTextContainer = document.querySelector('.default-text');
-        defaultTextContainer.innerHTML = `<h1>Selamat Datang, ${username}</h1>`;
-    }
-    checkLoginStatus();
-});
