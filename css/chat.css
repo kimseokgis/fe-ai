@@ -63,5 +63,10 @@
   }
 
   .settings-section h3 {
-    
+    margin-bottom: 10px;
   }
+
+  .settings-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
