@@ -76,3 +76,13 @@
 .settings-item label {
   font-size: 1rem;
 }
+
+.settings-item select,
+.settings-item input[type="checkbox"],
+.settings-item button {
+  background: #2F2F2F;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  color: #FFFFFF;
+}
