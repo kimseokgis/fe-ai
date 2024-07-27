@@ -86,3 +86,9 @@
   padding: 5px 10px;
   color: #FFFFFF;
 }
+
+.settings-item button {
+    cursor: pointer;
+  }
+  
+  .settings-item button:hover {
