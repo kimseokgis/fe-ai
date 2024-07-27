@@ -92,3 +92,9 @@
   }
   
   .settings-item button:hover {
+    background: #5b5e71;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
