@@ -186,6 +186,8 @@ body {
 }
 
 .user-menu-content .menu-item {
+  display: flex;
+  align-items: center;
   padding: 10px 16px;
 }
 
@@ -195,6 +197,14 @@ body {
 
 .user-menu:hover .user-menu-content {
   display: block;
+}
+
+.menu-item {
+  display: flex;
+  align-items: left; /* Vertically center */
+  justify-content: left; /* Horizontally center */
+  padding: 10px;
+  text-align: center;
 }
 
 .profile-btn {
