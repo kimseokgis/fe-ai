@@ -1,3 +1,5 @@
+import { deleteCookie, getCookie } from './cookieUtils.js';
+
 document.getElementById('logoutButtonNavbar').addEventListener('click', function () {
     Swal.fire({
         title: 'Apakah Anda yakin ingin keluar?',
