@@ -17,8 +17,8 @@ document.getElementById('logoutButtonNavbar').addEventListener('click', function
                 confirmButtonText: 'OK'
             }).then((result) => {
                 if (result.isConfirmed) {
-                    localStorage.removeItem('username'); // Tambahkan ini untuk menghapus localStorage
-                    window.location.href = 'chat.html'; // Redirect to the login page or homepage
+                    localStorage.removeItem('username'); 
+                    window.location.href = 'chat.html'; 
                 }
             });
         }
@@ -32,10 +32,8 @@ window.onload = function () {
         const username = localStorage.getItem('username');
         if (username) {
             const defaultTextContainer = document.querySelector('.default-text');
-            defaultTextContainer.innerHTML = `<h1>Selamat Datang, ${username}</h1>`;
         }
     } else {
-        // Tampilkan pesan di halaman bahwa pengguna perlu login
         const chatContainer = document.querySelector(".chat-container");
         // Opsi: sembunyikan elemen input chat
         document.querySelector('.typing-container').style.display = 'none';
