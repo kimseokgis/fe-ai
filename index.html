@@ -17,7 +17,11 @@
     <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
     <link rel="manifest" href="site.webmanifest">
     <link rel="stylesheet" href="/css/index.css">
-
+    <style>
+        #demo {
+            white-space: pre-line; /* This ensures newlines are rendered */
+        }
+    </style>
 </head>
 
 <body id="top">
@@ -70,7 +74,7 @@
                         </h1>
                         <div class="s-intro__content-buttons">
                             <a href="./pages/chat.html" class="btn btn--stroke s-intro__content-btn">Mulai Disini</a>
-                            <a href="#" class="btn btn--stroke s-intro__content-btn" onclick="typeWriter()" id="demo">Sejarah Makmur</a>
+                            <a href="#" class="btn btn--stroke s-intro__content-btn" onclick="typeWriter()" id="demo">Filosofi Makmur</a>
                         </div>
                     </div>
                 </div>
@@ -78,15 +82,21 @@
             <!-- End Intro Section -->
             <script>
                 var i = 0;
-                var txt = ': Makmur berarti sejahtera dan tentram menggambarkan kehidupan anggota <br> yang sanggat senang jiwa dan raga';
+                var txt = '<br>Makmur berarti sejahtera dan tentram menggambarkan kehidupan anggota<br>yang sanggat senang jiwa dan raga';
                 var speed = 50;
-                
+
                 function typeWriter() {
-                  if (i < txt.length) {
+                if (i < txt.length) {
+                    // Check if the current character is a line break
+                    if (txt.charAt(i) === "<" && txt.substr(i, 4) === "<br>") {
+                    document.getElementById("demo").innerHTML += "<br>";
+                    i += 4; // Skip over the <br> tag
+                    } else {
                     document.getElementById("demo").innerHTML += txt.charAt(i);
                     i++;
+                    }
                     setTimeout(typeWriter, speed);
-                  }
+                }
                 }
                 </script>
             <!-- Testimonials Section -->
