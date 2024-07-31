@@ -4670,10 +4670,10 @@ img.u-pull-left {
    text-transform: uppercase;
   background-image: linear-gradient(
     -225deg,
-    #231557 0%,
-    #44107a 29%,
-    #ff1361 67%,
-    #fff800 100%
+    #e60b0b 0%,
+    #ffffff 29%,
+    #ff1b13 67%,
+    #fafafa 100%
   );
   background-size: auto auto;
   background-clip: border-box;
