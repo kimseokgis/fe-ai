@@ -13,5 +13,16 @@ if (i < txt.length) {
     i++;
     }
     setTimeout(typeWriter, speed);
-}
+}else {
+// Reset the content and styles after the text is fully typed
+setTimeout(function() {
+    var demoElement = document.getElementById("demo");
+    demoElement.innerHTML = 'Filosofi Makmur'; // Clear the content
+    demoElement.style.transform = 'scale(1)'; // Reset any transform (example: scale)
+    demoElement.style.left = '0px'; // Reset position (example: left position)
+    demoElement.style.top = '0px'; // Reset position (example: top position)
+    i = 0; // Reset the index
+    setTimeout(typeWriter, 1000); // Restart the typewriter effect after 1 second
+  }, 1000); // 1 second delay before resetting
+  }
 }
