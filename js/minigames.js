@@ -105,3 +105,12 @@ function updateGameArea() {
     myGamePiece.newPos();
     myGamePiece.update();
 }
+
+function everyinterval(n) {
+    if ((myGameArea.frameNo / n) % 1 == 0) {return true;}
+    return false;
+}
+
+function accelerate(n) {
+    myGamePiece.gravity = n;
+}
