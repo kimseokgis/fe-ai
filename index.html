@@ -70,12 +70,25 @@
                         </h1>
                         <div class="s-intro__content-buttons">
                             <a href="./pages/chat.html" class="btn btn--stroke s-intro__content-btn">Mulai Disini</a>
+                            <a href="#" class="btn btn--stroke s-intro__content-btn" onclick="typeWriter()" id="demo">Sejarah Makmur</a>
                         </div>
                     </div>
                 </div>
             </section>
             <!-- End Intro Section -->
-
+            <script>
+                var i = 0;
+                var txt = ': Makmur berarti sejahtera dan tentram menggambarkan kehidupan anggota <br> yang sanggat senang jiwa dan raga';
+                var speed = 50;
+                
+                function typeWriter() {
+                  if (i < txt.length) {
+                    document.getElementById("demo").innerHTML += txt.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, speed);
+                  }
+                }
+                </script>
             <!-- Testimonials Section -->
             <section id="testimonials" class="s-testimonials target-section">
                 <div class="row s-testimonials__content">
